@@ -1,0 +1,175 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<style>
+body {
+	overflow: hidden;
+}
+nav {
+	position:absolute;
+	top:0;
+	left:0;
+	display:block;
+	z-index:500;
+}
+h1 {
+	padding-top: 300px;
+	position:relative; 
+	top:-955px;
+}
+
+#div_1 {
+background-color: rgba(56,7,112,0.9);
+top: 0px;
+height: 955px;
+
+width: 100%;
+color: #FFF;
+position: absolute;
+bottom: 0px;
+left: 0px;
+right: 0px;
+overflow: hidden;
+
+}
+#div_2 {
+background-color: rgba(215,84,4,0.9);
+height: 955px;	
+width: 100%;
+color: #FFF;
+position: absolute;
+bottom: 0px;
+left: 0px;
+right: 0px;
+overflow: hidden;
+top: 955px;
+}
+video {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	background: url(images/bg.jpg) no-repeat;
+	background-size: cover;
+}
+
+.column_1 {
+	position:relative;
+	z-index:100;
+	width: 1024px;
+}
+
+.column_2 {
+	width:265px;
+	float:left;
+	padding-left:50px;
+	box-sizing:border-box;
+	margin-top:300px;
+}
+
+.column_3 {
+	width:660px;
+	float:right;
+		margin-top:228px;
+	box-sizing:border-box;
+
+}
+
+
+.column_3 p {
+	font-weight: 300;
+	width:390px;
+	color: #fff;
+	margin: 1.6em 0;
+}
+
+h1 {
+	font-size: 60px;
+	line-height: 67px;
+	color: #fff;
+	margin:0;
+	font-weight: 600;
+}
+
+.column_2 img {
+	width:215px;
+}
+
+
+nav ul {
+	list-style: none;
+	padding:0;
+	font-size:24px;
+	font-weight: 300;
+	opacity: 0.5;
+	margin:0.6em 0 0 0;
+}
+
+nav ul li {
+	margin: 0.2em 0;
+}
+
+
+</style>
+<nav>
+</nav>
+<div id="div_1">
+    <div class="column_1">
+    	<div class="column_2">
+            <header>
+                <img src="images/sketch-logo.svg" />
+            </header>
+            <nav>
+                <ul>
+                    <li><a id="nav_1" href="#">What we do</a></li>
+                    <li><a id="nav_2" href="#">Contact us</a></li>
+                </ul>
+            </nav>
+        </div>
+    	<div class="column_3" id="home">
+            <header>
+                <h1>We help brands <br/>create amazing customer experiences.</h1> 
+            </header>
+			<p>
+            In today's complex digital world customers interact with your company at any time, from anywhere, on a variety of devices, making informed buying decisions based on the experience they receive and the information they find. 
+            </p>
+            <p>
+            We believe that businesses with amazing customer experiences get more love by forming closer relationships with loyal customers, enjoy a better reputation, capture a bigger market share and make more ££££.
+            </p>
+            <img src="images/pencil-icon.svg" />
+        </div>
+	</div>
+</div>
+<div id="div_2">
+<h1>This is some content</h1>
+</div>
+<video autoplay="true" loop="true" id="bgvid">
+    <source id="webm" src="videos/oceans.webmsd.webm" type="video/webm">
+    <source id="mp4" src="videos/oceans.mp4" type="video/mp4">
+</video>
+
+<script>
+	myVid=document.getElementById("bgvid");
+	myVid.muted=true;
+
+	$('#nav_1').click(function(){
+		$('#div_2').animate({top:0}, 400, "easeOutCubic");
+		$('#div_2 .column_1').animate({top:0}, 400, "easeOutCubic", function(){
+		$('#div_1').animate({'opacity':0}, 400, function(){
+				$(this).css({top:'100%', 'opacity':1, 'zIndex':100});
+				})
+			});
+	});
+	$('#nav_2').click(function(){
+		$('#div_1').animate({top:0}, 400, "easeOutCubic");
+		$('h1').animate({top:0}, 400, "easeOutCubic", function(){
+		$('#div_2').animate({'opacity':0}, 400, function(){
+				$(this).css({top:'100%','opacity':1, 'zIndex':100});
+				});
+			});
+	});
+
+</script>
