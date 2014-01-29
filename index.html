@@ -1,81 +1,62 @@
 <!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
-<link href="style.css" rel="stylesheet" type="text/css" />
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
+  <title>Sketch</title>
+  <meta name="viewport" content="initial-scale=1.0, width=device-width, minimum-scale=1.0, maximum-scale=2.0">
+
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='css/styles.css' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="http://fast.fonts.net/jsapi/efa2f888-2591-45e8-8e5b-c14ae2a02d82.js"></script>
+  <script type="text/javascript" src='js/lib/jquery.js'></script>
+
 </head>
-
 <body>
-
 <div id="wrapper">
+  <!-- Page. --> 
+  <div id="logo">
+  	<img src="images/sketch-logo-white.svg" width="220" />
+  </div>
+ 
+  <nav id="menu-outer">
+  <div class="table">
+    <ul id="horizontal-list">
+      <li class="first"><a href="#1">What we do</a></li>
+      <li><a href="#2">Why we do it</a></li>
+      <li><a href="#3">How we do it</a></li>
+      <li class="last"><a href="#4">Get in touch!</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+  <article class='page hidden'>
+    <div class='big-image vidStart'>
+        <div class='inner'>
+          <div class='fader'>
+            <div class='text'>
+              <h1 class='question'></h1>
+              <h2 class='description'></h2>
+            </div>
+          </div>
+        </div>
+    </div>
     
-<div class="container" id="slide_1">
-    <div class="column_1">
-    	<div class="column_2">
-            <header>
-                <img src="images/sketch-logo.svg" />
-            </header>
-            <nav>
-                <ul>
-                    <li><a id="nav_1" href="#">What we do</a></li>
-                    <li><a id="nav_2" href="#">Contact us</a></li>
-                </ul>
-            </nav>
-        </div>
-    	<div class="column_3" id="home">
-            <header>
-                <h1>We help brands <br/>create amazing customer experiences.</h1> 
-            </header>
-			<p>
-            In today's complex digital world customers interact with your company at any time, from anywhere, on a variety of devices, making informed buying decisions based on the experience they receive and the information they find. 
-            </p>
-            <p>
-            We believe that businesses with amazing customer experiences get more love by forming closer relationships with loyal customers, enjoy a better reputation, capture a bigger market share and make more ££££.
-            </p>
-            <img src="images/pencil-icon.svg" />
-        </div>
-     
-     
-<div class="column_3" id="contact">
-            <header>
-                <h1>Get in touch</h1> 
-            </header>
-			<p>
-            In today's complex digital world customers interact with your company at any time, from anywhere, on a variety of devices, making informed buying decisions based on the experience they receive and the information they find. 
-            </p>
-            <p>
-            We believe that businesses with amazing customer experiences get more love by forming closer relationships with loyal customers, enjoy a better reputation, capture a bigger market share and make more ££££.
-            </p>
-            <img src="images/pencil-icon.svg" />
-        </div>   
+    <div class='content'>
+      <h1 class='title'></h1>
+      <div class='text clearfix'></div>
     </div>
+    
+  </article>
+  
+  <div id="overlay">
+    <video autoplay loop id="bgvid">
+        <source id="webm" src="videos/vid_1.webm" type="video/webm">
+        <source id="mp4" src="videos/vid_1.mp4" type="video/mp4">
+    </video>
+  </div>
+  
 </div>
-    <div id="overlay">
-        <div class="purple"></div>
-        <div class="orange"></div>
-    </div>
+  <script type="text/javascript" src='js/app.js'></script>
 
-<video autoplay="true" loop="true" id="bgvid">
-    <source id="webm" src="videos/oceans.webmsd.webm" type="video/webm">
-    <source id="mp4" src="videos/oceans.mp4" type="video/mp4">
-</video>
-
-</div>
-
-
-
-<script type="text/javascript">
-	myVid=document.getElementById("bgvid");
-	myVid.muted=true;
-	
-	$('#nav_1').click(function(){
-		$('#overlay .purple').css({top: "-100%"});
-		$('#overlay .orange').css({top: 0});
-		$('#home').css({"display":"none"});
-		$('#contact').css({"display":"block"});
-	});
-</script>
 </body>
 </html>

@@ -1,0 +1,539 @@
+/* line 2, ../scss/_extensions.scss */
+html, body {
+	height:100%;
+}
+
+
+.container, body article.page .content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* line 7, ../scss/_extensions.scss */
+.stretchy-bg, body article.page .big-image {
+  background-position: center center;
+  background-repeat: none;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 13, ../scss/_extensions.scss */
+.big-image, body article.page .big-image {
+  height: 300px;
+}
+@media only screen and (min-width: 500px) {
+  /* line 13, ../scss/_extensions.scss */
+  .big-image, body article.page .big-image {
+    height: 120px;
+  }
+}
+
+/* line 61, ../../../../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+* html {
+  font-size: 125%;
+}
+
+/* line 64, ../../../../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 20px;
+  line-height: 0.3em;
+}
+
+/* line 4, ../scss/_mixins.scss */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+/* line 9, ../scss/_mixins.scss */
+::-webkit-scrollbar-thumb {
+  background: #666666;
+}
+
+/* line 13, ../scss/_mixins.scss */
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* line 18, ../scss/_mixins.scss */
+body {
+  scrollbar-face-color: #666666;
+  scrollbar-track-color: rgba(255, 255, 255, 0.1);
+}
+
+/* line 11, ../scss/styles.scss */
+body {
+	font-family:'HelveticaNeueW01-Thin';
+  color: #fff;
+  padding: 20px;
+  padding: 30px;
+  margin: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  line-height: 1.8em;
+  /* Responsive typography, yay! */
+  font-size: 80%;
+  /* Page-wrap styles.  */
+  	box-sizing:border-box;
+
+}
+@media only screen and (min-width: 500px) {
+  /* line 11, ../scss/styles.scss */
+  body {
+    font-size: 100%;
+  }
+}
+/* line 27, ../scss/styles.scss */
+body h1 {
+	font-family:'HelveticaNeueW01-Thin';
+	font-weight: normal;
+	font-size: 60px;
+	/*font-family:'HelveticaNeueW01-55Roma';*/
+}
+/* line 31, ../scss/styles.scss */
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  color: #fff;
+}
+/* line 36, ../scss/styles.scss */
+body article.page {
+  -webkit-transform-origin: bottom center;
+  /* Class applied when when page fades away. */
+  /* The large image that accompanies every post. */
+  /* The content. */
+}
+/* line 39, ../scss/styles.scss */
+body article.page.hidden {
+  display: none;
+}
+/* line 42, ../scss/styles.scss */
+body article.page .big-image, body article.page .big-image {
+  cursor: pointer;
+    	background: url(../images/arrow-1.svg) no-repeat center top;
+		opacity:0.5;
+		-webkit-transition: opacity 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+    -moz-transition: opacity 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+	-o-transition: opacity 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+	transition: opacity 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+
+}
+
+body article.page.next .big-image:hover {
+	opacity:1;
+}
+
+body article.page.current .big-image,
+body article.page.fade-up-out .big-image {
+	opacity:0;
+	padding-top:0;
+}
+
+body article.page.fade-up-out 
+/* line 43, ../scss/styles.scss */
+body article.page.next .big-image .inner, body article.page.next .big-image .inner {
+  opacity: 1;
+}
+/* line 47, ../scss/styles.scss */
+body article.page.content-hidden .content {
+  /*display: none;*/
+  opacity:0;
+		-webkit-transition: all 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+    -moz-transition: all 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+	-o-transition: all 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+	transition: all 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000); /* easeOutExpo */
+   transition-delay: 0.2s;
+-webkit-transition-delay: 0.2s; /* Safari */
+}
+
+body article .content {
+	opacity: 1;
+		-webkit-transition: all 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+    -moz-transition: all 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+	-o-transition: all 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+	transition: all 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000); /* easeOutExpo */
+   transition-delay: 0.2s;
+-webkit-transition-delay: 0.2s; /* Safari */
+}
+
+/* line 51, ../scss/styles.scss */
+body article.page.fade-up-out {
+  opacity: 1;
+  /*
+  -webkit-transform: translate3d(0, -100%, 0);
+  -moz-transform:  translate3d(0, -100%, 0);
+  -ms-transform:  translate3d(0, -100%, 0);
+  -o-transform:  translate3d(0, -100%, 0);
+  transform:  translate3d(0, -100%, 0);
+  */
+ 	-webkit-transform-origin: 50% 100%;
+	-webkit-animation: rotateFoldTop .7s both ease;
+	-moz-transform-origin: 50% 100%;
+	-moz-animation: rotateFoldTop .7s both ease;
+	transform-origin: 50% 100%;
+	animation: rotateFoldTop .7s both ease;
+
+  -webkit-transition: all 750ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: all 750ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 750ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 750ms cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+/* line 57, ../scss/styles.scss */
+body article.page.easing-upward {
+  -webkit-transition: all 750ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: all 750ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 750ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 750ms cubic-bezier(0.165, 0.84, 0.44, 1);
+   transition-delay: 0.2s;
+-webkit-transition-delay: 0.2s; /* Safari */
+}
+/* line 62, ../scss/styles.scss */
+body article.page .big-image, body article.page .big-image {
+  font-size: 80%;
+}
+@media only screen and (min-width: 500px) {
+  /* line 62, ../scss/styles.scss */
+  body article.page .big-image, body article.page .big-image {
+    font-size: 100%;
+  }
+}
+/* line 69, ../scss/styles.scss */
+body article.page .big-image .inner, body article.page .big-image .inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  opacity: 0;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+    transition-delay: 1.2s;
+-webkit-transition-delay: 1.2s; /* Safari */
+
+}
+/* line 78, ../scss/styles.scss */
+body article.page .big-image .inner .fader, body article.page .big-image .inner .fader {
+  width: 100%;
+  height: 100%;
+  /*background: rgba(0, 0, 0, 0.3);*/
+}
+/* line 83, ../scss/styles.scss */
+body article.page .big-image .inner .fader .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+
+}
+/* line 89, ../scss/styles.scss */
+body article.page .big-image .inner .fader .text a, body article.page .big-image .inner .fader .text h1, body article.page .big-image .inner .fader .text h2 {
+  color: white;
+}
+/* line 91, ../scss/styles.scss */
+body article.page .big-image .inner .fader .text a {
+  color: white;
+  border-bottom: 1px solid white;
+  text-decoration: none;
+  font-style: italic;
+  font-size: 0.8em;
+  line-height: 1.5em;
+}
+/* line 99, ../scss/styles.scss */
+body article.page .big-image .inner .fader .text h1 {
+  margin: 0;
+  margin-top: 0.1em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 0em;
+  font-size: 3em;
+  line-height: 1.1em;
+}
+/*
+body article.content-hidden .big-image .inner .fader .text h1 {
+	opacity: 0.5;
+		-webkit-transition: all 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+    -moz-transition: all 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+	-o-transition: all 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+	transition: all 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+
+}
+
+body article.content-hidden .big-image .inner .fader .text h1:hover {
+	opacity:1;
+}
+*/
+/* line 105, ../scss/styles.scss */
+body article.page .big-image .inner .fader .text h2 {
+  margin: 0;
+  font-style: italic;
+  font-weight: normal;
+  margin-top: 0.2em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 0em;
+  font-size: 1.5em;
+  line-height: 1.2em;
+}
+/* line 119, ../scss/styles.scss */
+body article.page .content {
+  padding: 10px 0 0 107px;
+}
+/* line 123, ../scss/styles.scss */
+body article.page .content h3 {
+  color: #999;
+  font-family: 'Source Sans Pro', serif;
+  font-weight: 400;
+  margin-top: 3em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 0.375em;
+  font-size: 0.8em;
+  line-height: 1.5em;
+}
+/* line 131, ../scss/styles.scss */
+body article.page .content h1 {
+  margin-top: 0em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 0.24em;
+  font-size: 60px;
+  line-height: 1.15em;
+}
+
+body article.page4 .content h1 {
+	font-size:33px;
+}
+
+/* line 136, ../scss/styles.scss */
+body article.page .content h2.description {
+  font-weight: normal;
+  font-style: italic;
+}
+/* line 140, ../scss/styles.scss */
+/*body article.page .content p:last-child {
+  margin-bottom: 3em;
+}*/
+
+video {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	background-size: cover;
+}
+
+#overlay .purple {
+	background: rgba(56,7,112,0.9);
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	-webkit-transition: all 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+    -moz-transition: all 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+	-o-transition: all 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+	transition: all 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000); /* easeOutExpo */
+
+}
+
+#overlay {
+		z-index: -100;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+
+}
+
+#wrapper {
+width: 100%;
+height: 100%;
+overflow: hidden;
+position: relative;
+box-sizing:border-box;
+
+background: rgba(56,7,112,0.9); /* Chrome10+,Safari5.1+ */
+}
+
+#wrapper {
+	background-image: url(../images/bg-stripe.png);
+	background-repeat:repeat;
+		-webkit-transition: background-color 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+    -moz-transition: background-color 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+	-o-transition: background-color 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+	transition: background-color 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000); /* easeOutExpo */
+
+}
+
+#wrapper.orange {
+	background-color: rgba(215,84,4,0.9); /* Chrome10+,Safari5.1+ */
+}
+#wrapper.purple {
+background-color: rgba(56,7,112,0.9); /* Chrome10+,Safari5.1+ */
+}
+#wrapper.blue {
+	background-color: rgba(3,73,201,0.9); /* Chrome10+,Safari5.1+ */
+}
+#wrapper.green {
+	background-color: rgba(79,177,0,0.9); /* Chrome10+,Safari5.1+ */
+}
+
+
+@-webkit-keyframes rotateFoldTop {
+	to { opacity: 0; -webkit-transform: translateY(-100%) rotateX(90deg); }
+}
+@-moz-keyframes rotateFoldTop {
+	to { opacity: 0; -moz-transform: translateY(-100%) rotateX(90deg); }
+}
+@keyframes rotateFoldTop {
+	to { opacity: 0; transform: translateY(-100%) rotateX(90deg); }
+}
+
+p {
+	font-size:21px;
+	line-height:27px;
+	font-weight:normal;
+}
+
+nav {
+	position: absolute;
+	z-index:100000;
+	width:100%;
+	background: #440184;
+	bottom:0;
+}
+
+.orange .content img {
+	float: left;
+	margin-left: -15px;
+}
+
+.orange p {
+	padding-left: 30px;
+margin-top: 10px;}
+
+
+.page1 .content, .page5 .content {
+	background:url(../images/pencil.svg) no-repeat top left;
+	background-size:contain;
+}
+
+
+.text p {
+	width: 380px;
+/*padding-bottom: 30px;*/
+float:left;
+}
+
+article {
+	clear:both;
+}
+
+.clearfix:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+#logo {
+	position: absolute;
+	left: 35px;
+	top:35px;
+}
+
+.page5 .big-image,
+.page4 .big-image {
+	display:none;
+}
+
+#menu-outer {
+	border-top: 1px solid #7d2ec9;
+}
+#menu-outer,
+ul#horizontal-list li a,
+ul#horizontal-list li.first a
+{
+		-webkit-transition: background-color 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+    -moz-transition: background-color 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+	-o-transition: background-color 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+	transition: background-color 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000); /* easeOutExpo */
+}
+
+.purple #menu-outer,
+.purple ul#horizontal-list li a,
+.purple ul#horizontal-list li.first a
+{
+	background: #440184;
+	border-color: #7d2ec9;
+}
+.orange #menu-outer,
+.orange ul#horizontal-list li a,
+.orange ul#horizontal-list li.first a
+ {
+	background: #e3661a;
+	border-color: #ffa66f;
+}
+.blue #menu-outer,
+.blue ul#horizontal-list li a,
+.blue ul#horizontal-list li.first a
+ {
+	background: #0e54d3;
+	border-color: #4f8dff;
+}
+.green #menu-outer,
+.green ul#horizontal-list li a,
+.green ul#horizontal-list li.first a
+ {
+	background: #63bf19;
+	border-color: #72ff00;
+}
+
+
+.table {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
+
+ul#horizontal-list {
+	min-width: 640px;
+	list-style: none;
+	line-height:normal;
+	margin:0;
+	padding:0;
+	}
+	ul#horizontal-list li {
+		display: inline;
+		
+	}
+		ul#horizontal-list li a {
+		display: block;
+		padding:15px 22px;
+		float:left;
+		color: #fff;
+		text-decoration: none;
+		border-right: 1px solid #7d2ec9;
+		font-size:22.5px;
+	}
+	ul#horizontal-list li a:hover,
+	ul#horizontal-list li.first a:hover {
+		background: rgba(0,0,0,0.2);
+	}
+	ul#horizontal-list li.first a {
+		border-left: 1px solid #7d2ec9;
+	}
